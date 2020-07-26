@@ -300,6 +300,7 @@ public class WaitingActivity extends Activity {
                         String bodyString = object.getString("body");
                         StartOrderResponseBody body=gson.fromJson(bodyString,StartOrderResponseBody.class);
                         mOrder.setOrderId(body.getOrderId());
+                        Log.e("orderid",""+mOrder.getOrderId());
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
